@@ -4,52 +4,48 @@
     <link rel="stylesheet" href="alphabet.css">
     <title>Alphabet Sound</title>
     <style>
-        .letter {
-            
-            cursor: pointer;
-            margin: 5px;
-            font-size: 68px;
-            display: inline-block;
-        }
+       
     </style>
 </head>
 <body>
 
-    <div id= "grid-container">
-    <div id="alphabet">
-        
+    <div id="grid-container">
+        <div id="alphabet">
+        </div>
     </div>
-</div>
+    <div id="star-container">
+        <div class="star"></div>
+      </div>
 
     <script>
         window.onload = function() {
             const sounds = {
-                "A": "./mp3/LetterName_A.mp3",
-                "B": "./mp3/LetterName_B.mp3",
-                "C": "./mp3/LetterName_C.mp3",
-                "D": "./mp3/LetterName_D.mp3",
-                "E": "./mp3/LetterName_E.mp3",
-                "F": "./mp3/LetterName_F.mp3",
-                "G": "./mp3/LetterName_G.mp3",
-                "H": "./mp3/LetterName_H.mp3",
-                "I": "./mp3/LetterName_I.mp3",
-                "J": "./mp3/LetterName_J.mp3",
-                "K": "./mp3/LetterName_K.mp3",
-                "L": "./mp3/LetterName_L.mp3",
-                "M": "./mp3/LetterName_M.mp3",
-                "N": "./mp3/LetterName_N.mp3",
-                "O": "./mp3/LetterName_O.mp3",
-                "P": "./mp3/LetterName_P.mp3",
-                "Q": "./mp3/LetterName_Q.mp3",
-                "R": "./mp3/LetterName_R.mp3",
-                "S": "./mp3/LetterName_S.mp3",
-                "T": "./mp3/LetterName_T.mp3",
-                "U": "./mp3/LetterName_U.mp3",
-                "V": "./mp3/LetterName_V.mp3",
-                "W": "./mp3/LetterName_W.mp3",
-                "X": "./mp3/LetterName_X.mp3",
-                "Y": "./mp3/LetterName_Y.mp3",
-                "Z": "./mp3/LetterName_Z.mp3",
+                "Aa": "./mp3/LetterName_A.mp3",
+                "Bb": "./mp3/LetterName_B.mp3",
+                "Cc": "./mp3/LetterName_C.mp3",
+                "Dd": "./mp3/LetterName_D.mp3",
+                "Ee": "./mp3/LetterName_E.mp3",
+                "Ff": "./mp3/LetterName_F.mp3",
+                "Gg": "./mp3/LetterName_G.mp3",
+                "Hh": "./mp3/LetterName_H.mp3",
+                "Ii": "./mp3/LetterName_I.mp3",
+                "Jj": "./mp3/LetterName_J.mp3",
+                "Kk": "./mp3/LetterName_K.mp3",
+                "Ll": "./mp3/LetterName_L.mp3",
+                "Mm": "./mp3/LetterName_M.mp3",
+                "Nn": "./mp3/LetterName_N.mp3",
+                "Oo": "./mp3/LetterName_O.mp3",
+                "Pp": "./mp3/LetterName_P.mp3",
+                "Qq": "./mp3/LetterName_Q.mp3",
+                "Rr": "./mp3/LetterName_R.mp3",
+                "Ss": "./mp3/LetterName_S.mp3",
+                "Tt": "./mp3/LetterName_T.mp3",
+                "Uu": "./mp3/LetterName_U.mp3",
+                "Vv": "./mp3/LetterName_V.mp3",
+                "Ww": "./mp3/LetterName_W.mp3",
+                "Xx": "./mp3/LetterName_X.mp3",
+                "Yy": "./mp3/LetterName_Y.mp3",
+                "Zz": "./mp3/LetterName_Z.mp3",
             };
             const alphabetDiv = document.getElementById("alphabet");
 
@@ -68,6 +64,16 @@
             const audio = new Audio(soundURL);
             audio.play();
         }
+        
+        document.addEventListener("mousemove", function(event) {
+  let stars = document.querySelectorAll(".star");
+  stars.forEach(function(star) {
+    star.style.setProperty("--x", event.clientX + "px");
+    star.style.setProperty("--y", event.clientY + "px");
+  });
+});
+
+
     </script>
 </body>
 </html>
